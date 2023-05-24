@@ -3,7 +3,7 @@
   # AI Memory Overflow
   <i>A project by [@tercmd (on Twitter)](https://twitter.com/tercmd)</i>
 
-  <!-- ![Stars for the AI Memory Overflow repo](https://img.shields.io/github/stars/terminalcommandnewsletter/ai-memory-overflow?style=for-the-badge&logo=github) -->
+  ![Stars for the AI Memory Overflow repo](https://img.shields.io/github/stars/terminalcommandnewsletter/ai-memory-overflow?style=for-the-badge&logo=github)
   
   Understanding the memory context of AI models by testing prompt lengths exceeding their context limits. [Contributions welcome!](./CONTRIBUTING.md)
 
