@@ -1,0 +1,91 @@
+name: 'New model data'
+description: 'Add data for a new model here.'
+title: "New model data: "
+labels: ["enhancement"]
+assignees:
+  - terminalcommandnewsletter
+body:
+  - type: checkboxes
+    attributes:
+      label: 'Is there an existing issue for this?'
+      description: 'Please search to see if an issue already exists for the feature not being covered in the repo.'
+      options:
+      - label: 'I have searched the existing issues'
+        required: true
+  - type: input
+    id: new-model
+    attributes:
+      label: 'New Model'
+      description: 'What is the new model? Format: <model name>'
+      placeholder: 'e.g. gpt-4'
+    validations:
+      required: true
+  - type: input
+    id: context-length
+    attributes:
+      label: 'What is the context length of the model?'
+      description: 'This number must be officially released by the creator of the model.'
+      placeholder: 'e.g. 8192 tokens. You can find this number at https://...'
+    validations:
+      required: true
+  - type: input
+    id: average-pc-remembered
+    attributes:
+      label: 'What is the average percentage of blocks remembered by the model?'
+      description: 'This must be a mean average.'
+      placeholder: 'e.g. XX.XX%'
+    validations:
+      required: true
+  - type: input
+    id: lowest-pc-remembered
+    attributes:
+      label: 'What is the lowest percentage of blocks remembered by the model?'
+      placeholder: 'e.g. XX.XX%'
+    validations:
+      required: true
+  - type: input
+    id: highest-pc-remembered
+    attributes:
+      label: 'What is the highest percentage of blocks remembered by the model?'
+      placeholder: 'e.g. XX.XX%'
+    validations:
+      required: true
+  - type: input
+    id: std-dev-remembered
+    attributes:
+      label: 'What is the standard deviation of blocks remembered by the model?'
+      placeholder: 'e.g. XX.XX%'
+    validations:
+      required: true
+  - type: input
+    id: number-of-tests
+    attributes:
+      label: 'How many tests have you run?'
+      placeholder: 'e.g. 100'
+    validations:
+      required: true
+  - type: textarea
+    id: data
+    attributes:
+      label: 'Model data'
+      description: 'Raw model data in the format generated using --check or -x. Format: <last block remembered>,<number of blocks>,<percentage of blocks remembered by model>'
+      placeholder: 'Type data here...'
+      render: CSV
+    validations:
+      required: true
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: 'Optionally, add more information'
+      description: 'Additional information'
+      placeholder: 'More information...'
+    validations:
+      required: false
+  - type: checkboxes
+    id: contributing-md
+    attributes:
+      label: 'CONTRIBUTING.md'
+      description: 'By submitting this issue, I agree that I have read the `CONTRIBUTING.md` of this repo and this issue adheres to those guidelines.'
+      options:
+        - label: I have read the `CONTRIBUTING.md`
+          required: true
