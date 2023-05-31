@@ -1,7 +1,7 @@
 name: 'New model data'
 description: 'Add data for a new model here.'
-title: "New model data: "
-labels: ["enhancement"]
+title: "New model data: (Short, descriptive title)"
+labels: ["new-model-data"]
 assignees:
   - terminalcommandnewsletter
 body:

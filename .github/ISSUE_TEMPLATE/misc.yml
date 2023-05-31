@@ -1,0 +1,29 @@
+name: 'Miscellaneous'
+description: 'If nothing above applies, use this.'
+title: "Misc: (Short, descriptive title)"
+labels: ["misc"]
+assignees:
+  - terminalcommandnewsletter
+body:
+  - type: checkboxes
+    attributes:
+      label: 'Is there an existing issue for this?'
+      description: 'Please search to see if an issue already exists for the feature not being covered in the repo.'
+      options:
+      - label: 'I have searched the existing issues'
+        required: true
+  - type: textarea
+    id: issue-info
+    attributes:
+      label: 'What is the issue?'
+      placeholder: 'e.g. [...]'
+    validations:
+      required: true
+  - type: checkboxes
+    id: contributing-md
+    attributes:
+      label: 'CONTRIBUTING.md'
+      description: 'By submitting this issue, I agree that I have read the `CONTRIBUTING.md` of this repo and this issue adheres to those guidelines.'
+      options:
+        - label: I have read the `CONTRIBUTING.md`
+          required: true

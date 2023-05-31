@@ -1,0 +1,61 @@
+name: 'Bug'
+description: 'Bug in the Python script'
+title: "Bug: (Short, descriptive title)"
+labels: ["bug"]
+assignees:
+  - terminalcommandnewsletter
+body:
+  - type: checkboxes
+    attributes:
+      label: 'Is there an existing issue for this?'
+      description: 'Please search to see if an issue already exists for the feature not being covered in the repo.'
+      options:
+      - label: 'I have searched the existing issues'
+        required: true
+  - type: checkboxes
+    attributes:
+      label: 'Are you using a Python version later than 2.6, the latest version of the script and the latest version of tiktoken?'
+      description: 'Please check this before submitting this issue.'
+      options:
+      - label: 'Yes, I am.'
+        required: true
+  - type: textarea
+    id: bug-info
+    attributes:
+      label: 'What is the bug?'
+      placeholder: 'e.g. I was trying to [...] but the program [...]. Expected behavio(u)r is [...]'
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: 'What OS are you running it on?'
+      description: 'OS and version.'
+      placeholder: 'e.g. Ubuntu 22.04'
+    validations:
+      required: true
+  - type: input
+    id: model
+    attributes:
+      label: 'What model are you supplying?'
+      description: 'The string being passed to the script via the -m/--model argument.'
+      placeholder: 'e.g. gpt-3.5-turbo'
+    validations:
+      required: true
+  - type: textarea
+    id: console-output
+    attributes:
+      label: 'Console output'
+      description: 'Optional, but recommended as this may be useful in identifying issues.'
+      placeholder: 'Type console output here...'
+      render: shell
+    validations:
+      required: false
+  - type: checkboxes
+    id: contributing-md
+    attributes:
+      label: 'CONTRIBUTING.md'
+      description: 'By submitting this issue, I agree that I have read the `CONTRIBUTING.md` of this repo and this issue adheres to those guidelines.'
+      options:
+        - label: I have read the `CONTRIBUTING.md`
+          required: true
