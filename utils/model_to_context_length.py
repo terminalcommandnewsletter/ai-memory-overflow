@@ -22,6 +22,7 @@ def model_to_context_length(model: str):
     """
     prefixes = {
         32768: ["gpt-4-32k"],
+        16384: ["gpt-3.5-turbo-16k"],
         8192: ["gpt-4"],
         8001: ["code-davinci-"],
         4097: [
