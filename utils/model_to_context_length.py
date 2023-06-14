@@ -25,9 +25,7 @@ def model_to_context_length(model: str):
         16384: ["gpt-3.5-turbo-16k"],
         8192: ["gpt-4"],
         8001: ["code-davinci-"],
-        4097: [
-            "text-davinci-",
-        ],
+        4097: ["text-davinci-"],
         4096: ["gpt-3.5-turbo"],
         2049: ["text-", "davinci", "curie", "babbage", "ada"],
         2048: ["code-cushman-"],
