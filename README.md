@@ -43,9 +43,9 @@ To run a test on a model (by OpenAI, as this uses their library `tiktoken`), fol
 
 2. Clone this repo into a folder (`git clone https://github.com/terminalcommandnewsletter/ai-memory-overflow.git`) as the script requires files in `utils/` to run.
 
-3. In the terminal, run `python test.py -m [MODEL]`. Requires Python 2.6 or later.
+3. In the terminal, run `python main.py -m [MODEL]`. Requires Python 2.6 or later.
 
-To see all options, run `python test.py -h`.
+To see all options, run `python main.py -h`.
 
 Use the `--old`/`-u` flag to use the same concatenation used in the testing (not perfect, since it adds the separator at the beginning).
 
@@ -54,9 +54,9 @@ Also, to check the index of a block, use the `--check`/`-x` flag which will ask 
 If you have tested any model extensively (not in the repo), you can [contribute to the repo](./CONTRIBUTING.md).
 
 ## Final Test Results
-| Test Number | Model Tested | Context Length | Number of Characters per Block | Average (Mean) % Remembered | Lowest % Remembered | Highest % Remembered | Standard Deviation | Number of Tests | Tested by | Test data (without headers, format: `"last" block index,number of blocks,percentage remembered`) |
-|-|-|-|-|-|-|-|-|-|-|-|
-| 1 | gpt-3.5-turbo | 4096 tokens | 5 | 75.99% | 13.04% | 79.45% | 11.24% | 100 | [@terminalcommandnewsletter](https://github.com/terminalcommandnewsletter) | [Test data](./test-data/gpt-3.5-turbo-terminalcommandnewsletter.csv) |
+| Test Number | Tested in | Model Tested | Context Length | Number of Characters per Block | Average (Mean) % Remembered | Lowest % Remembered | Highest % Remembered | Standard Deviation | Number of Tests | Tested by | Test data (without headers, format: `"last" block index,number of blocks,percentage remembered`) |
+|-|-|-|-|-|-|-|-|-|-|-|-|
+| 1 | May 2023 | gpt-3.5-turbo | 4096 tokens | 5 | 75.99% | 13.04% | 79.45% | 11.24% | 100 | [@terminalcommandnewsletter](https://github.com/terminalcommandnewsletter) | [Test data](./test-data/gpt-3.5-turbo-terminalcommandnewsletter.csv) |
 
 ## License
 The license for this repo can be found in the [COPYING](./COPYING) file.
